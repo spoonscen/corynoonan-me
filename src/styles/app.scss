@@ -4,16 +4,69 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'Roboto', sans-serif;
 }
 
 
 body {
-  height: 95vh;
-  width: 95vw;
-  margin-right: 2.5vw;
-  margin-left: 2.5vw;
-  margin-top: 2.5vh;
-  margin-bottom: 2.5vh;
-  border: 2px solid white;
+  height: 92vh;
+  width: 93vw;
+  margin-right: 3.5vw;
+  margin-left: 3.5vw;
+  margin-top: 3.5vh;
+  border: 6px solid white;
   overflow: hidden;
+}
+
+.page-title {
+  font-size: 2.25vw;
+  text-transform: uppercase;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.router {
+  left: 0;
+  margin-top: -100px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.navigation {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 31vw;
+  margin-left: 34.5vw;
+  font-size: 2vw;
+
+  .bar {
+    border-left: 2px solid white;
+  }
+
+  a {
+    color: white;
+    text-transform: uppercase;
+  }
+  a:link {
+    text-decoration: none;
+  }
+
+  a:visited {
+      text-decoration: none;
+  }
+
+  a:hover {
+      text-decoration: none;
+      opacity: 0.5;
+  }
+
+  a:active {
+      text-decoration: underline;
+  }
 }

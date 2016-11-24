@@ -2,20 +2,19 @@ import * as React from "react";
 import { Link } from 'react-router'
 
 export interface LayoutProps {
+  children: JSX.Element[]
 }
 
-export class Layout extends React.Component<LayoutProps, {}> {
-  render() {
+export function Layout(props: LayoutProps) {
     return (
       <div>
-        <Link to="main">main</Link>
-        <Link to="projects">projects</Link>
-        <Link to="blog">blog</Link>
-        <Link to="resume">resume</Link>
-        {this.props.children}
+        <Link to="main"></Link>
+        <Link to="projects"></Link>
+        <Link to="blog"></Link>
+        <Link to="resume"></Link>
+        {props.children}
       </div>
     )
-  }
 }
 
 

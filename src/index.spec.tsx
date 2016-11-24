@@ -13,7 +13,6 @@ describe('index.tsx', () => {
   it('has a router and routes', () => {
     expect(wrapper.find(Router)).to.have.length(1)
     expect(wrapper.find(Route)).to.have.length(5)
-    expect(wrapper.find(IndexRoute)).to.have.length(1)
   })
 
 })
