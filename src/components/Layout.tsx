@@ -8,11 +8,10 @@ export class Layout extends React.Component<LayoutProps, {}> {
   render() {
     return (
       <div>
-        <h1>corynoonan.me</h1>
-        <Link to="main">Home</Link>
-        <Link to="projects">Projects</Link>
-        <Link to="blog">Blog</Link>
-        <Link to="resume">Resume</Link>
+        <Link to="main">main</Link>
+        <Link to="projects">projects</Link>
+        <Link to="blog">blog</Link>
+        <Link to="resume">resume</Link>
         {this.props.children}
       </div>
     )

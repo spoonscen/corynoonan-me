@@ -12,13 +12,15 @@ import { ResumePage } from './pages/ResumePage'
 const app = document.getElementById('app')
 
 render((
-    <Router history={hashHistory}>
-        <Route path="/" component={Layout}>
-            <IndexRoute component={MainPage} />
-            <Route path="main" component={MainPage} />
-            <Route path="blog" component={BlogPage} />
-            <Route path="projects" component={ProjectsPage} />
-            <Route path="resume" component={ResumePage} />
-        </Route>
-    </Router>
+    <div className="main-page-container">
+        <Router history={hashHistory}>
+            <Route path="/" component={Layout}>
+                <IndexRoute component={MainPage} />
+                <Route path="main" component={MainPage} />
+                <Route path="blog" component={BlogPage} />
+                <Route path="projects" component={ProjectsPage} />
+                <Route path="resume" component={ResumePage} />
+            </Route>
+        </Router>
+    </div>
 ), app)

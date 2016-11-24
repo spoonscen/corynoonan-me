@@ -1,0 +1,21 @@
+html {
+  background: url('../public/assets/main.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html,
+body {
+  height: 90%;
+  width: 95%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  border: 2px solid white;
+}
+
+html {
+  border: none;
+}

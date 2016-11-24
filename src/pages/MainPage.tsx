@@ -5,7 +5,9 @@ export interface MainPageProps {
 }
 
 export function MainPage(props: MainPageProps) {
-  return <h1>Main Page</h1>
+  return (
+      <h1>Main Page</h1>
+  )
 }
 
 
