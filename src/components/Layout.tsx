@@ -9,6 +9,7 @@ export class Layout extends React.Component<LayoutProps, {}> {
     return (
       <div>
         <h1>corynoonan.me</h1>
+        <Link to="main">Home</Link>
         <Link to="projects">Projects</Link>
         <Link to="blog">Blog</Link>
         <Link to="resume">Resume</Link>
