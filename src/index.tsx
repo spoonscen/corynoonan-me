@@ -11,16 +11,14 @@ const app = document.getElementById('app')
 
 export const IndexPage = (
   <div className="index-container">
-    <div className="router">
-      <Router history={hashHistory}>
-        <Route path="/" component={Layout}>
-            <Route path="main" component={MainPage} />
-            <Route path="blog" component={BlogPage} />
-            <Route path="projects" component={ProjectsPage} />
-            <Route path="resume" component={ResumePage} />
-        </Route>
-      </Router>
-    </div>
+    <Router history={hashHistory}>
+      <Route path="/" component={Layout}>
+        <Route path="main" component={MainPage} />
+        <Route path="blog" component={BlogPage} />
+        <Route path="projects" component={ProjectsPage} />
+        <Route path="resume" component={ResumePage} />
+      </Route>
+    </Router>
   </div>
 )
 

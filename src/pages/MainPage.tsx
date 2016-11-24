@@ -7,17 +7,19 @@ interface MainPageProps {
 
 export function MainPage(props: MainPageProps) {
   return (
-    <div>
-      <div className="page-title">
-        <h1>cory noonan</h1>
-      </div>
-      <div className="navigation">
-        <Link to="projects">projects</Link>
-        <div className="bar" />
-        <Link to="blog">blog</Link>
-        <div className="bar" />
-        <Link to="resume">resume</Link>
-        {props.children}
+    <div className="main-page-container">
+      <div>
+        <div className="page-title">
+          <h1>cory noonan</h1>
+        </div>
+        <div className="navigation">
+          <Link to="projects">projects</Link>
+          <div className="bar" />
+          <Link to="blog">blog</Link>
+          <div className="bar" />
+          <Link to="resume">resume</Link>
+          {props.children}
+        </div>
       </div>
     </div>
   )
