@@ -6,16 +6,14 @@ html {
   background-size: cover;
 }
 
-html,
-body {
-  height: 90%;
-  width: 95%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  margin: 0 auto;
-  border: 2px solid white;
-}
 
-html {
-  border: none;
+body {
+  height: 95vh;
+  width: 95vw;
+  margin-right: 2.5vw;
+  margin-left: 2.5vw;
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+  border: 2px solid white;
+  overflow: hidden;
 }
