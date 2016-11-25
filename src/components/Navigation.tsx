@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from 'react-router'
+import { Link, browserHistory } from 'react-router'
 
 export interface NavigationProps {
   children?: any[]
@@ -13,19 +13,25 @@ export interface NavigationProps {
 }
 
 export function Navigation(props: NavigationProps): JSX.Element {
-  const activeTab = props.pathname
-  const {container, headerContainer, navigation, bar} = props.classNames
+  const { pathname, classNames } = props
+  const { container, headerContainer, navigation, bar } = classNames
+
+  const maybeHeaderLink = (pathname: string): JSX.Element => (
+    pathname === '/'
+      ? <h1>cory noonan</h1>
+      : <h1 style={{cursor: 'pointer'}} onClick={() => window.location.hash = '#/'}>cory noonan</h1>)
+
   return (
     <div className={container}>
       <div className={headerContainer}>
-        <h1>cory noonan</h1>
+      { maybeHeaderLink(pathname) }
       </div>
       <div className={navigation}>
-        <Link className={activeTab === '/projects' ? 'active' : null} to="projects">projects</Link>
+        <Link className={pathname === '/projects' ? 'active' : null} to="projects">projects</Link>
         <div className={bar} />
-        <Link className={activeTab === '/blog' ? 'active' : null} to="blog">blog</Link>
+        <Link className={pathname === '/blog' ? 'active' : null} to="blog">blog</Link>
         <div className={bar} />
-        <Link className={activeTab === '/resume' ? 'active' : null} to="resume">resume</Link>
+        <Link className={pathname === '/resume' ? 'active' : null} to="resume">resume</Link>
         { props.children }
       </div>
     </div>
