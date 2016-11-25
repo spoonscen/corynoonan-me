@@ -9,7 +9,7 @@ export function MainPage(props: MainPageProps) {
   return (
     <div className="main-page-container">
       <div>
-        <div className="page-title">
+        <div className="full-name-header-container">
           <h1>cory noonan</h1>
         </div>
         <div className="navigation">

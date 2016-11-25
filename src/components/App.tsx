@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Link } from 'react-router'
 
-export interface LayoutProps {
+export interface AppProps {
   children: JSX.Element[]
 }
 
-export function Layout(props: LayoutProps) {
+export function App(props: AppProps) {
     return (
       <div>
         <Link to="main"></Link>
