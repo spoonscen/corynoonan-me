@@ -3,7 +3,7 @@ const router = express.Router()
 
 
 interface Response extends Express.Response {
-  send: (item: string) => void
+  send: (item: any) => void
 }
 
 router.get('/', (req: Express.Request, res: Response) => {
@@ -28,7 +28,19 @@ router.get('/', (req: Express.Request, res: Response) => {
 })
 
 router.get('/api/projects', (req: Express.Request, res: Response) => {
-  res.send('projects route!')
+  res.send({
+    data: {
+      projects: [
+        {
+          title: 'Spoonsaunce',
+          details: 'hotsauce!',
+          description: 'hotsauce description!',
+          firstImage: 'www.somelink.com/image',
+          secondImage: 'www.somelink.com/image2',
+        }
+      ]
+    }
+  })
 })
 
 export default router

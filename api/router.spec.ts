@@ -29,7 +29,10 @@ describe('v2 router', () => {
   it('responds to a GET at /api/projects', () =>
     agent.get('/api/projects').then((response: Response) => {
       expect(response).to.have.status(200)
-      expect(response.text).to.include('projects')
+      expect(response.body)
+        .to.have.property('data')
+        .that.has.property('projects')
+        .that.is.an('array')
     }))
 
 })
