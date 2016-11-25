@@ -1,26 +1,28 @@
 import * as React from "react";
 import { Link } from 'react-router'
+import { Navigation } from '../components/Navigation'
 
 interface MainPageProps {
   children: JSX.Element[]
+  location: {
+    pathname: string
+  }
 }
 
 export function MainPage(props: MainPageProps) {
+  const navigationProps = {
+    children: props.children,
+    classNames: {
+      container: 'navigation-container',
+      headerContainer: 'full-name-header-container',
+      navigation: 'navigation',
+      bar: 'bar',
+    },
+    pathname: props.location.pathname
+  }
   return (
     <div className="main-page-container">
-      <div>
-        <div className="full-name-header-container">
-          <h1>cory noonan</h1>
-        </div>
-        <div className="navigation">
-          <Link to="projects">projects</Link>
-          <div className="bar" />
-          <Link to="blog">blog</Link>
-          <div className="bar" />
-          <Link to="resume">resume</Link>
-          {props.children}
-        </div>
-      </div>
+      <Navigation { ...navigationProps} />
     </div>
   )
 }

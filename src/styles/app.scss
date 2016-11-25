@@ -1,3 +1,5 @@
+$brown: #6A5252;
+
 html {
   background: url('../public/assets/main.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -18,17 +20,6 @@ body {
   overflow: hidden;
 }
 
-.full-name-header-container {
-  font-size: 2.25vw;
-  text-transform: uppercase;
-  color: white;
-  display: flex;
-  justify-content: space-around;
-
-  h1 {
-    margin-bottom: 20px;
-  }
-}
 
 .main-page-container {
   left: 0;
@@ -36,28 +27,54 @@ body {
   position: absolute;
   top: 50%;
   width: 100%;
-}
 
-a {
-  color: white;
-  text-transform: uppercase;
-}
-a:link {
-  text-decoration: none;
-}
 
-a:visited {
+  .full-name-header-container {
+    font-size: 2.25vw;
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+
+    h1 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .navigation {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 31vw;
+    margin-left: 34.5vw;
+    font-size: 2vw;
+
+    .bar {
+      border-left: 2px solid white;
+    }
+  }
+
+  a {
+    color: white;
+    text-transform: uppercase;
+  }
+  a:link {
     text-decoration: none;
+  }
+
+  a:visited {
+      text-decoration: none;
+  }
+
+  a:hover {
+      text-decoration: none;
+      opacity: 0.5;
+  }
+
+  a:active {
+      text-decoration: none;
+  }
 }
 
-a:hover {
-    text-decoration: none;
-    opacity: 0.5;
-}
-
-a:active {
-    text-decoration: none;
-}
 
 .navigation {
   display: inline-flex;
@@ -71,14 +88,64 @@ a:active {
   }
 }
 
-#projects-page-container {
-  display: flex;
-}
+.projects-page-container {
+  left: 0;
+  margin-top: -75px;
+  position: absolute;
+  top: 10vh;
+  width: 100%;
 
-.back-to-home {
-  margin-left: .25vw;
-  margin-top: 1vh;
-  i {
-    padding-right: 3px;
+  .full-name-header-container {
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+
+    h1 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .navigation {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 21vw;
+    margin-left: 39.5vw;
+    font-size: 1.25vw;
+
+    .bar {
+      border-left: 2px solid white;
+    }
+
+    a {
+      padding: 4px;
+      color: white;
+      text-transform: uppercase;
+    }
+    a:link {
+      text-decoration: none;
+    }
+
+    a:visited {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: $brown;
+        background-color: white;
+        opacity: 0.8;
+    }
+
+    a:active {
+        text-decoration: none;
+    }
+
+    a.active {
+      background-color: white;
+      color: $brown;
+    }
+
   }
 }
