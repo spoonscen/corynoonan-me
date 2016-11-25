@@ -6,9 +6,10 @@ import { MainPage } from './pages/MainPage'
 import { App } from './components/App'
 import { ProjectsPage } from './pages/ProjectsPage'
 import { ResumePage } from './pages/ResumePage'
+require('./styles/app.scss')
 
 const app = document.getElementById('app')
-require('./styles/app.scss')
+
 export const IndexPage = (
   <div className="index-container">
     <Router history={hashHistory}>
