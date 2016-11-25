@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link, browserHistory } from 'react-router'
+import * as _ from 'lodash'
 
 export interface NavigationProps {
   children?: any[]
@@ -12,19 +13,21 @@ export interface NavigationProps {
   pathname: string
 }
 
+export const maybeHeaderLink = (pathname: string, hash: string, window: Window): JSX.Element => {
+  const onClick = (window: Window) => () => _.set(window.location, 'hash', hash)
+  return  pathname === '/'
+      ? <h1>cory noonan</h1>
+      : <h1 className="header-link" onClick={ onClick(window) }>cory noonan</h1>
+}
+
 export function Navigation(props: NavigationProps): JSX.Element {
   const { pathname, classNames } = props
   const { container, headerContainer, navigation, bar } = classNames
 
-  const maybeHeaderLink = (pathname: string): JSX.Element => (
-    pathname === '/'
-      ? <h1>cory noonan</h1>
-      : <h1 style={{cursor: 'pointer'}} onClick={() => window.location.hash = '#/'}>cory noonan</h1>)
-
   return (
     <div className={container}>
       <div className={headerContainer}>
-      { maybeHeaderLink(pathname) }
+      { maybeHeaderLink(pathname, '#/', window) }
       </div>
       <div className={navigation}>
         <Link className={pathname === '/projects' ? 'active' : null} to="projects">projects</Link>
