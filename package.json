@@ -4,15 +4,19 @@
   "description": "Personal website of Cory Noonan @spoonscen",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "dev": "webpack --watch",
-    "css": "sass --watch src/styles/app.scss:dist/styles.css"
+    "concurrently": "./node_modules/concurrently/src/main.js -p command",
+    "dev": "npm run concurrently --kill-others 'npm run frontend' 'npm run server'",
+    "frontend": "webpack --watch",
+    "server": "nodemon server.ts",
+    "test": "mocha"
   },
   "author": "Cory E Noonan",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.14.0",
     "history": "4.4.0",
     "lodash": "^4.17.2",
+    "path": "^0.12.7",
     "react": "15.3.2",
     "react-dom": "15.3.2",
     "react-redux": "4.4.5",
@@ -31,6 +35,7 @@
     "babel-polyfill": "^6.16.0",
     "babel-preset-es2015": "^6.18.0",
     "chai": "^3.5.0",
+    "concurrently": "^3.1.0",
     "enzyme": "^2.6.0",
     "jsdom": "^9.8.3",
     "react-addons-test-utils": "15.3.2",
