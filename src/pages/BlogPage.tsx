@@ -19,7 +19,7 @@ export function BlogPage(props: BlogPageProps) {
   }
 
   return (
-    <div className="projects-page-container">
+    <div className="blog-page-container">
       <Navigation { ...navigationProps} />
     </div>
   )

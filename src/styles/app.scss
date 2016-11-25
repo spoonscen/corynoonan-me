@@ -7,6 +7,8 @@ html {
   -o-background-size: cover;
   background-size: cover;
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
 }
 
 
@@ -18,6 +20,9 @@ body {
   margin-top: 3.5vh;
   border: 6px solid white;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 
@@ -80,7 +85,7 @@ body {
   display: inline-flex;
   justify-content: space-between;
   width: 31vw;
-  margin-left: 34.5vw;
+
   font-size: 2vw;
 
   .bar {
@@ -88,64 +93,80 @@ body {
   }
 }
 
+.blog-page-container,
+.resume-page-container,
 .projects-page-container {
-  left: 0;
-  margin-top: -75px;
-  position: absolute;
-  top: 10vh;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 93vh;
 
-  .full-name-header-container {
-    font-size: 1.5vw;
-    text-transform: uppercase;
-    color: white;
-    display: flex;
-    justify-content: space-around;
+  .navigation-container {
+    height: 18vh;
 
-    h1 {
-      margin-bottom: 20px;
-    }
-  }
-
-  .navigation {
-    display: inline-flex;
-    justify-content: space-between;
-    width: 21vw;
-    margin-left: 39.5vw;
-    font-size: 1.25vw;
-
-    .bar {
-      border-left: 2px solid white;
-    }
-
-    a {
-      padding: 4px;
-      color: white;
+    .full-name-header-container {
+      font-size: 1.5vw;
       text-transform: uppercase;
-    }
-    a:link {
-      text-decoration: none;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+
+      h1 {
+        margin-bottom: 20px;
+      }
     }
 
-    a:visited {
-        text-decoration: none;
-    }
+    .navigation {
+      display: inline-flex;
+      justify-content: space-between;
+      width: 21vw;
+      font-size: 1.25vw;
 
-    a:hover {
+      .bar {
+        border-left: 2px solid white;
+      }
+
+      a {
+        padding: 4px;
+        color: white;
+        text-transform: uppercase;
+      }
+      a:link {
         text-decoration: none;
-        color: $brown;
+      }
+
+      a:visited {
+          text-decoration: none;
+      }
+
+      a:hover {
+          text-decoration: none;
+          color: $brown;
+          background-color: white;
+          opacity: 0.8;
+      }
+
+      a:active {
+          text-decoration: none;
+      }
+
+      a.active {
         background-color: white;
-        opacity: 0.8;
-    }
+        color: $brown;
+      }
 
-    a:active {
-        text-decoration: none;
     }
-
-    a.active {
-      background-color: white;
-      color: $brown;
-    }
-
   }
+}
+
+
+.projects-page-container {
+
+
+  .projects-content {
+    background-color: white;
+    width: 93vw;
+    height: 74vh;
+  }
+
 }

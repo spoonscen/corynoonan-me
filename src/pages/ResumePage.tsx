@@ -20,7 +20,7 @@ export function ResumePage(props: ResumePageProps){
   }
 
   return (
-    <div className="projects-page-container">
+    <div className="resume-page-container">
       <Navigation { ...navigationProps} />
     </div>
   )
