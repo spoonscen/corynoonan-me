@@ -7,12 +7,6 @@ import Project from './Project'
 
 export function ProjectsPage(props: ProjectsPageProps): JSX.Element {
   const navigationProps = {
-    classNames: {
-      container: 'navigation-container',
-      headerContainer: 'full-name-header-container',
-      navigation: 'navigation',
-      bar: 'bar',
-    },
     pathname: props.location.pathname
   }
 

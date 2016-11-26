@@ -13,12 +13,6 @@ describe('Navigation.tsx', () => {
     children: [
       ProjectsPage
     ],
-    classNames: {
-      container: 'navigation-container',
-      headerContainer: 'full-name-header-container',
-      navigation: 'navigation',
-      bar: 'bar',
-    },
     pathname: ''
   }
   const setup = (props: NavigationProps) => {

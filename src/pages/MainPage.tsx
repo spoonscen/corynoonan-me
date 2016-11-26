@@ -12,12 +12,6 @@ interface MainPageProps {
 export function MainPage(props: MainPageProps): JSX.Element {
   const navigationProps = {
     children: props.children,
-    classNames: {
-      container: 'navigation-container',
-      headerContainer: 'full-name-header-container',
-      navigation: 'navigation',
-      bar: 'bar',
-    },
     pathname: props.location.pathname
   }
   return (

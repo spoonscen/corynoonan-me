@@ -9,12 +9,6 @@ export interface BlogPageProps {
 
 export function BlogPage(props: BlogPageProps): JSX.Element {
   const navigationProps = {
-    classNames: {
-      container: 'navigation-container',
-      headerContainer: 'full-name-header-container',
-      navigation: 'navigation',
-      bar: 'bar',
-    },
     pathname: props.location.pathname
   }
 
