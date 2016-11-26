@@ -13,8 +13,10 @@ describe('<Projects />', () => {
     link: 'mock link',
     github: 'mock github',
     description: 'mock description',
-    firstImage: 'mockFirstImage.com',
-    secondImage: 'mockSecondImage.com',
+    imageLinks: [
+      'mockFirstImage.com',
+      'mockSecondImage.com',
+    ]
   } as ProjectProps
 
   beforeEach(() => {
@@ -25,7 +27,7 @@ describe('<Projects />', () => {
     expect(wrapper.find('.project')).to.have.length(1)
     expect(wrapper.find('.project-image-container')).to.have.length(1)
     expect(wrapper.find('.project-image')).to.have.length(2)
-    expect(wrapper.find('.project-image').first().html()).to.equal(`<img class="project-image" src="${MockProjectsProps.firstImage}"/>`)
+    expect(wrapper.find('.project-image').first().html()).to.equal(`<img class="project-image" src="mockFirstImage.com"/>`)
     expect(wrapper.find('.project-info-container')).to.have.length(1)
     expect(wrapper.find('.project-title').text()).to.equal(MockProjectsProps.title)
     expect(wrapper.find('.fa.fa-link')).to.have.length(1)

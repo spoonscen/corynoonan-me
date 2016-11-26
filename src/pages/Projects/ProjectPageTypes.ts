@@ -15,8 +15,7 @@ export interface ProjectProps {
   link: string
   github: string
   description: string
-  firstImage: string
-  secondImage: string
+  imageLinks: string[]
 }
 
 export interface ProjectsPageProps {

@@ -1,6 +1,6 @@
 import React = require('react')
 import * as Promise from 'bluebird'
-import apiCalls = require('../api-interactions')
+import apiCalls = require('../../api-interactions')
 import * as _ from 'lodash'
 import { ProjectsPage } from './ProjectsPage'
 import { ProjectsPageProps, ProjectPageContainerState, ApiResponse } from './ProjectPageTypes'

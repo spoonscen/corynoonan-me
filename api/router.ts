@@ -37,8 +37,10 @@ router.get('/api/projects', (req: Express.Request, res: Response) => {
           description: 'As a hotsauce lover Spoonsauce was a way for me to start sharing my passion with the world.',
           link: 'http://spoonsauce.com',
           github: 'https://github.com/spoonscen/Spoonsauce',
-          firstImage: 'http://i.imgur.com/OZkH2Z2.jpg',
-          secondImage: 'http://i.imgur.com/WlXe0Ec.jpg',
+          imageLinks: [
+            'http://i.imgur.com/OZkH2Z2.jpg',
+            'http://i.imgur.com/WlXe0Ec.jpg',
+          ]
         }
       ]
     }

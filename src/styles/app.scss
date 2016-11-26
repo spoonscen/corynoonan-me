@@ -1,4 +1,6 @@
 $brown: #6A5252;
+$green: #76822b;
+$dark-green: #3c4215;
 
 html {
   background: url('../../public/assets/main.jpg') no-repeat center center fixed;
@@ -186,6 +188,7 @@ body {
 .project {
   display: flex;
   justify-content: space-around;
+  margin-top: 3vw;
 
   .project-info-container{
     color: $brown;
@@ -196,6 +199,20 @@ body {
     h1 {
       font-size: 4vw;
       margin: 0;
+    }
+
+    .project-link-container {
+      display: inline-flex;
+      margin-top: 1vw;
+
+      .project-link {
+        color: $green;
+        margin-right: 1vw;
+        font-size: 1.5vw;
+      }
+      .project-link:hover {
+        color: $dark-green;
+      }
     }
   }
 

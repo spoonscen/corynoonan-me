@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Navigation } from '../components/Navigation'
+import { Navigation } from '../../components/Navigation'
 import * as _ from 'lodash'
 import { ProjectsPageProps, ProjectProps } from './ProjectPageTypes'
 import Project from './Project'
