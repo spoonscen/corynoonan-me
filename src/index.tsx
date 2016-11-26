@@ -5,7 +5,7 @@ import { BlogPage } from './pages/BlogPage'
 import { MainPage } from './pages/MainPage'
 import { App } from './components/App'
 import ProjectsPageContainer  from './pages/Projects/ProjectsPageContainer'
-import { ResumePage } from './pages/ResumePage'
+import { AboutPage } from './pages/AboutPage'
 import './styles/app.scss'
 import '../public/assets/vendor/font-awesome-4.7.0/css/font-awesome.min.css'
 
@@ -18,7 +18,7 @@ export const IndexPage = (
         <IndexRoute component={MainPage} />
         <Route path="blog" component={BlogPage} />
         <Route path="projects" component={ProjectsPageContainer} />
-        <Route path="resume" component={ResumePage} />
+        <Route path="about" component={AboutPage} />
       </Route>
     </Router>
   </div>

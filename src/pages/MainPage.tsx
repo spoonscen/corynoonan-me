@@ -9,7 +9,7 @@ interface MainPageProps {
   }
 }
 
-export function MainPage(props: MainPageProps) {
+export function MainPage(props: MainPageProps): JSX.Element {
   const navigationProps = {
     children: props.children,
     classNames: {
@@ -22,7 +22,7 @@ export function MainPage(props: MainPageProps) {
   }
   return (
     <div className="main-page-container">
-      <Navigation { ...navigationProps} />
+      <Navigation {...navigationProps} />
     </div>
   )
 }

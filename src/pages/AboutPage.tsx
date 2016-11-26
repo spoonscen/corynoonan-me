@@ -1,14 +1,14 @@
-import * as React from "react";
+import * as React from 'react'
 import { Navigation } from '../components/Navigation'
 
 
-export interface ResumePageProps {
+export interface AboutPageProps {
   location: {
     pathname: string
   }
 }
 
-export function ResumePage(props: ResumePageProps){
+export function AboutPage(props: AboutPageProps): JSX.Element {
   const navigationProps = {
     classNames: {
       container: 'navigation-container',
@@ -21,7 +21,7 @@ export function ResumePage(props: ResumePageProps){
 
   return (
     <div className="resume-page-container">
-      <Navigation { ...navigationProps} />
+      <Navigation {...navigationProps} />
     </div>
   )
 }

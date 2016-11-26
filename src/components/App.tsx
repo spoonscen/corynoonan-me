@@ -11,7 +11,7 @@ export function App(props: AppProps) {
         <Link to="main"></Link>
         <Link to="projects"></Link>
         <Link to="blog"></Link>
-        <Link to="resume"></Link>
+        <Link to="about"></Link>
         {props.children}
       </div>
     )

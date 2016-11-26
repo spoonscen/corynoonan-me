@@ -1,9 +1,9 @@
 import { expect } from 'chai'
-import * as React from "react";
+import * as React from 'react'
 import * as enzyme from 'enzyme'
 import { Navigation, NavigationProps } from './Navigation'
-import { ProjectsPage } from '../pages/ProjectsPage'
-import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router'
+import { ProjectsPage } from '../pages/Projects/ProjectsPage'
+import { Link } from 'react-router'
 import * as _ from 'lodash'
 
 describe('Navigation.tsx', () => {

@@ -4,7 +4,7 @@ import * as enzyme from 'enzyme'
 import { ProjectProps } from './ProjectPageTypes'
 import { expect } from 'chai'
 
-describe('<Projects />', () => {
+describe('<Project />', () => {
   let wrapper: enzyme.ShallowWrapper<any, any>
 
   const MockProjectsProps = {
@@ -12,7 +12,7 @@ describe('<Projects />', () => {
     details: 'mock details',
     link: 'mock link',
     github: 'mock github',
-    description: 'mock description',
+    description: 'mock\ndescription',
     imageLinks: [
       'mockFirstImage.com',
       'mockSecondImage.com',
@@ -32,8 +32,13 @@ describe('<Projects />', () => {
     expect(wrapper.find('.project-title').text()).to.equal(MockProjectsProps.title)
     expect(wrapper.find('.fa.fa-link')).to.have.length(1)
     expect(wrapper.find('.fa.fa-github')).to.have.length(1)
+  })
+
+  it('splits the project description', () => {
     expect(wrapper.find('.project-details').text()).to.equal(MockProjectsProps.details)
-    expect(wrapper.find('.project-description').text()).to.equal(MockProjectsProps.description)
+    expect(wrapper.find('.project-description')).to.have.length(1)
+    expect(wrapper.find('.project-description-paragraph')).to.have.length(2)
+    expect(wrapper.find('.project-description-paragraph').first().text()).to.equal('mock')
   })
 
 })

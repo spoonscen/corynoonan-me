@@ -7,7 +7,7 @@ export interface BlogPageProps {
   }
 }
 
-export function BlogPage(props: BlogPageProps) {
+export function BlogPage(props: BlogPageProps): JSX.Element {
   const navigationProps = {
     classNames: {
       container: 'navigation-container',
@@ -20,7 +20,7 @@ export function BlogPage(props: BlogPageProps) {
 
   return (
     <div className="blog-page-container">
-      <Navigation { ...navigationProps} />
+      <Navigation {...navigationProps} />
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import * as express from 'express'
 const router = express.Router()
-
+const projects = require('./data/projects.json')
 
 interface Response extends Express.Response {
   send: (item: any) => void
@@ -30,19 +30,7 @@ router.get('/', (req: Express.Request, res: Response) => {
 router.get('/api/projects', (req: Express.Request, res: Response) => {
   res.send({
     data: {
-      projects: [
-        {
-          title: 'Spoonsauce',
-          details: 'General Assembly final project (Angular)',
-          description: 'As a hotsauce lover Spoonsauce was a way for me to start sharing my passion with the world.',
-          link: 'http://spoonsauce.com',
-          github: 'https://github.com/spoonscen/Spoonsauce',
-          imageLinks: [
-            'http://i.imgur.com/OZkH2Z2.jpg',
-            'http://i.imgur.com/WlXe0Ec.jpg',
-          ]
-        }
-      ]
+      projects
     }
   })
 })

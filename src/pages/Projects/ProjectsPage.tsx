@@ -15,12 +15,13 @@ export function ProjectsPage(props: ProjectsPageProps): JSX.Element {
     },
     pathname: props.location.pathname
   }
-  const firstProject = _.get(props, 'projects[0]', {}) as ProjectProps
+
+  const projects = _.get(props, 'projects', []) as ProjectProps[]
   return (
     <div className="projects-page-container">
       <Navigation {...navigationProps} />
       <div className="projects-content">
-        <Project {...firstProject} />
+        {_.map(projects, (project: ProjectProps) => <Project key={project.title} {...project} />)}
       </div>
     </div>
   )

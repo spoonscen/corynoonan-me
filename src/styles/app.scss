@@ -1,6 +1,7 @@
 $brown: #6A5252;
 $green: #76822b;
 $dark-green: #3c4215;
+$border: 6px solid white;
 
 html {
   background: url('../../public/assets/main.jpg') no-repeat center center fixed;
@@ -20,7 +21,7 @@ body {
   margin-right: 3.5vw;
   margin-left: 3.5vw;
   margin-top: 3.5vh;
-  border: 6px solid white;
+  border: $border;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -181,6 +182,8 @@ body {
     width: 93vw;
     height: 74vh;
     overflow: scroll;
+    border-top: $border;
+    border-bottom: $border;
   }
 
 }
@@ -194,7 +197,8 @@ body {
     color: $brown;
     display: flex;
     flex-direction: column;
-    width: 42vw;
+    width: 35vw;
+    margin-right: 4vw;
 
     h1 {
       font-size: 4vw;
@@ -224,7 +228,7 @@ body {
       width: 44vw;
       margin: 1vw;
       background-color: $brown;
-      padding: .25vw;
+      padding: .16vw
     }
   }
 }
