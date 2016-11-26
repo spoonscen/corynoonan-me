@@ -8,7 +8,7 @@ export default function Project(props: ProjectProps): JSX.Element {
   return (
     <div className="project" key={title}>
       <div className="project-image-container">
-        {_.map(imageLinks, (link: string) => <img key={link} className="project-image" src={link || ''} /> )}
+        {_.map(imageLinks, (imageLink: string) => <a href={link}><img key={imageLink} className="project-image" src={imageLink || ''} /></a> )}
       </div>
       <div className="project-info-container">
         <h1 className="project-title">{title || ''}</h1>

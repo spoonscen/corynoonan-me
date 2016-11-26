@@ -26,8 +26,7 @@
     "link": "http://spoonsauce.com",
     "github": "https://github.com/spoonscen/Spoonsauce",
     "imageLinks": [
-      "https://s3.amazonaws.com/corynoonan.me/Screen+Shot+2016-11-25+at+19.32.22.png",
-      "https://s3.amazonaws.com/corynoonan.me/Screen+Shot+2016-11-25+at+19.32.10.png"
+      "https://s3.amazonaws.com/corynoonan.me/Screen+Shot+2016-11-25+at+19.32.22.png"
     ]
   },
   {
@@ -37,7 +36,6 @@
     "link": "https://chrome.google.com/webstore/detail/unix-timestamp-converter/clkkocmhcpfginlphpgjmgpdffihcbmm",
     "github": "https://github.com/spoonscen/unix-timestamp-chrome",
     "imageLinks": [
-      "https://s3.amazonaws.com/corynoonan.me/8ACpnl6.png",
       "https://s3.amazonaws.com/corynoonan.me/Screen+Shot+2016-11-26+at+14.57.20.png"
     ]
   }
