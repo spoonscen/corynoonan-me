@@ -1,15 +1,15 @@
 export interface ProjectPageContainerState {
-  projects?: Project[]
+  projects?: ProjectProps[]
   err?: Error
 }
 
 export interface ApiResponse {
   data: {
-    projects: Project[]
+    projects: ProjectProps[]
   }
 }
 
-export interface Project {
+export interface ProjectProps {
   title: string
   details: string
   link: string
@@ -24,6 +24,6 @@ export interface ProjectsPageProps {
   location: {
     pathname: string
   }
-  projects?: Project[]
+  projects?: ProjectProps[]
   err?: Error
 }

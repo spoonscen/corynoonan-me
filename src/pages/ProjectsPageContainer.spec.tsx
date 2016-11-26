@@ -1,7 +1,7 @@
 import React = require('react')
 import ProjectsPageContainer from './ProjectsPageContainer'
 import * as enzyme from 'enzyme'
-import { Project } from './ProjectPageTypes'
+import { ProjectProps } from './ProjectPageTypes'
 import { expect } from 'chai'
 import { ProjectsPage } from './ProjectsPage'
 import apiCalls = require('../api-interactions')
@@ -18,7 +18,7 @@ describe('<ProjectsPageContainer />', () => {
     location: {
       pathname: 'foobar'
     },
-    projects: [{}] as Project[],
+    projects: [{}] as ProjectProps[],
   }
 
   beforeEach(() => {
