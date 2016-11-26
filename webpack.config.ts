@@ -2,25 +2,25 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
     node: {
-        fs: "empty",
-        net: "empty",
-        tls: "empty",
-        dns: "empty",
-        dgram: "empty"
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty',
+        dns: 'empty',
+        dgram: 'empty'
     },
-    entry: "./src/index.tsx",
+    entry: './src/index.tsx',
     output: {
-        filename: "bundle.js",
-        path: __dirname + "/dist",
+        filename: 'bundle.js',
+        path: __dirname + '/dist',
         publicPath:  __dirname + '/dist'
     },
 
     // Enable sourcemaps for debugging webpack's output.
-    devtool: "source-map",
+    devtool: 'source-map',
 
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
-        extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+        extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
     },
 
     module: {
@@ -28,15 +28,15 @@ module.exports = {
             // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
             {
                 test: /\.tsx?$/,
-                loader: "ts-loader"
+                loader: 'ts-loader'
             },
             {
                 test: /\.scss$/,
-                loaders: ["style-loader", "css-loader", "sass-loader"]
+                loaders: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.jpg$/,
-                loader: "url-loader?limit=1000000000000000000000"
+                loader: 'url-loader?limit=1000000000000000000000'
             },
             {
                 test: /\.json$/,
@@ -48,33 +48,33 @@ module.exports = {
             },
             {
                 test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "url?limit=10000&mimetype=application/font-woff"
+                loader: 'url?limit=10000&mimetype=application/font-woff'
             },
             {
                 test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "url?limit=10000&mimetype=application/font-woff"
+                loader: 'url?limit=10000&mimetype=application/font-woff'
             },
             {
                 test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "url?limit=10000&mimetype=application/octet-stream"
+                loader: 'url?limit=10000&mimetype=application/octet-stream'
             },
             {
                 test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "file"
+                loader: 'file'
             },
             {
                 test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "url?limit=10000&mimetype=image/svg+xml"
+                loader: 'url?limit=10000&mimetype=image/svg+xml'
              }
         ],
 
         preLoaders: [
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-            { test: /\.js$/, loader: "source-map-loader" }
+            { test: /\.js$/, loader: 'source-map-loader' }
         ]
     },
     plugins: [
-        new ExtractTextPlugin("./dist/styles.css")
+        new ExtractTextPlugin('./dist/styles.css')
     ],
 
     // When importing a module whose path matches one of the following, just
@@ -82,8 +82,8 @@ module.exports = {
     // This is important because it allows us to avoid bundling all of our
     // dependencies, which allows browsers to cache those libraries between builds.
     externals: {
-        "react": "React",
-        "react-dom": "ReactDOM"
+        'react': 'React',
+        'react-dom': 'ReactDOM'
     },
 };
 
