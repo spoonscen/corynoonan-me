@@ -34,7 +34,7 @@ describe('Navigation.tsx', () => {
       const links = wrapper.find(Link)
       expect(links.find({to: 'projects'}).html()).to.equal('<a>projects</a>')
       expect(links.find({to: 'blog'}).html()).to.equal('<a>blog</a>')
-      expect(links.find({to: 'resume'}).html()).to.equal('<a>resume</a>')
+      expect(links.find({to: 'about'}).html()).to.equal('<a>about</a>')
 
     })
 

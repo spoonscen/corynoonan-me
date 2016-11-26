@@ -1,1 +1,1 @@
---require test/setup-env.js --compilers ts:typescript-require
+--require test/setup-env.js --require ignore-styles --compilers ts:typescript-require

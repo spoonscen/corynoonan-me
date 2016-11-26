@@ -8,7 +8,7 @@
     "dev": "npm run concurrently --kill-others 'npm run frontend' 'npm run server'",
     "frontend": "webpack --watch",
     "server": "nodemon --watch 'api/**/*.ts' --ignore 'src/**/*' --exec 'ts-node' api/server.ts",
-    "test": "mocha"
+    "test": "mocha -- 'src/**/*.spec.{ts,tsx}' -- 'api/**/*.spec.ts'"
   },
   "author": "Cory E Noonan",
   "license": "ISC",
@@ -49,6 +49,7 @@
     "enzyme": "^2.6.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
+    "ignore-styles": "^5.0.1",
     "jsdom": "^9.8.3",
     "json-loader": "^0.5.4",
     "less": "^2.7.1",

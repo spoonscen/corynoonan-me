@@ -9,7 +9,7 @@ interface Response extends ChaiHttp.Response {
   text: string
 }
 
-describe('v2 router', () => {
+describe('router', () => {
 
   let app: express.Application
   let agent: ChaiHttp.Agent
