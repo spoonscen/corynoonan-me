@@ -178,7 +178,36 @@ body {
     background-color: white;
     width: 93vw;
     height: 74vh;
+    overflow: scroll;
   }
 
 }
 
+.project {
+  display: flex;
+  justify-content: space-around;
+
+  .project-info-container{
+    color: $brown;
+    display: flex;
+    flex-direction: column;
+    width: 42vw;
+
+    h1 {
+      font-size: 4vw;
+      margin: 0;
+    }
+  }
+
+  .project-image-container {
+    display: flex;
+    flex-direction: column;
+
+    .project-image {
+      width: 44vw;
+      margin: 1vw;
+      background-color: $brown;
+      padding: .25vw;
+    }
+  }
+}

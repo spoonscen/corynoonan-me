@@ -32,11 +32,13 @@ router.get('/api/projects', (req: Express.Request, res: Response) => {
     data: {
       projects: [
         {
-          title: 'Spoonsaunce',
-          details: 'hotsauce!',
-          description: 'hotsauce description!',
-          firstImage: 'www.somelink.com/image',
-          secondImage: 'www.somelink.com/image2',
+          title: 'Spoonsauce',
+          details: 'General Assembly final project (Angular)',
+          description: 'As a hotsauce lover Spoonsauce was a way for me to start sharing my passion with the world.',
+          link: 'http://spoonsauce.com',
+          github: 'https://github.com/spoonscen/Spoonsauce',
+          firstImage: 'http://i.imgur.com/OZkH2Z2.jpg',
+          secondImage: 'http://i.imgur.com/WlXe0Ec.jpg',
         }
       ]
     }
