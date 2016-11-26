@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/request-promise": "^4.1.33",
+    "bluebird": "^3.4.6",
     "express": "^4.14.0",
     "history": "4.4.0",
     "lodash": "^4.17.2",
@@ -23,6 +24,7 @@
     "react-redux": "4.4.5",
     "react-router": "3.0.0",
     "redux": "3.0.0",
+    "request": "^2.79.0",
     "request-promise": "^4.1.1"
   },
   "devDependencies": {
@@ -47,6 +49,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "jsdom": "^9.8.3",
+    "json-loader": "^0.5.4",
     "nock": "^9.0.2",
     "node-sass": "^3.13.0",
     "react-addons-test-utils": "15.3.2",

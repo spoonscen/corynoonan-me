@@ -19,11 +19,11 @@ export function ProjectsPage(props: ProjectsPageProps): JSX.Element {
     pathname: props.location.pathname
   }
 
+
   return (
     <div className="projects-page-container">
       <Navigation { ...navigationProps} />
       <div className="projects-content">
-
       </div>
     </div>
   )

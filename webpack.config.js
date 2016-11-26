@@ -1,6 +1,13 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
+    node: {
+        fs: "empty",
+        net: "empty",
+        tls: "empty",
+        dns: "empty",
+        dgram: "empty"
+    },
     entry: "./src/index.tsx",
     output: {
         filename: "bundle.js",
@@ -30,6 +37,10 @@ module.exports = {
             {
                 test: /\.jpg$/,
                 loader: "url-loader?limit=1000000000000000000000"
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
             }
         ],
 
@@ -51,3 +62,4 @@ module.exports = {
         "react-dom": "ReactDOM"
     },
 };
+
