@@ -6,7 +6,8 @@ import { MainPage } from './pages/MainPage'
 import { App } from './components/App'
 import ProjectsPageContainer  from './pages/ProjectsPageContainer'
 import { ResumePage } from './pages/ResumePage'
-require('./styles/app.scss')
+import './styles/app.scss'
+import '../public/assets/vendor/font-awesome-4.7.0/css/font-awesome.min.css'
 
 const app = document.getElementById('app')
 

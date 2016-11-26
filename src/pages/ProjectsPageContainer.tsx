@@ -2,24 +2,12 @@ import React = require('react')
 import * as Promise from 'bluebird'
 import apiCalls = require('../api-interactions')
 import * as _ from 'lodash'
-import { ProjectsPage, ProjectsPageProps, Project } from './ProjectsPage'
+import { ProjectsPage } from './ProjectsPage'
+import { ProjectsPageProps, ProjectPageContainerState, ApiResponse } from './ProjectPageTypes'
 
-interface ProjectPageContainerProps extends ProjectsPageProps {
-}
 
-interface ProjectPageContainerState {
-  projects?: Project[]
-  err?: Error
-}
-
-interface ApiResponse {
-  data: {
-    projects: Project[]
-  }
-}
-
-export default class ProjectPageContainer extends React.Component<ProjectPageContainerProps, ProjectPageContainerState> {
-  constructor(props: ProjectPageContainerProps) {
+export default class ProjectPageContainer extends React.Component<ProjectsPageProps, ProjectPageContainerState> {
+  constructor(props: ProjectsPageProps) {
     super(props)
 
     this.state = {
@@ -40,8 +28,8 @@ export default class ProjectPageContainer extends React.Component<ProjectPageCon
 
   render(): JSX.Element {
     const { props } = this
-    const newProps = _.extend(this.state, props)
-    return <ProjectsPage {...newProps} />
+    const projectPageProps = _.extend(this.state, props)
+    return <ProjectsPage {...projectPageProps} />
   }
 
 }

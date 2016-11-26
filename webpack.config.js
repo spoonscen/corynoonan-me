@@ -12,7 +12,7 @@ module.exports = {
     output: {
         filename: "bundle.js",
         path: __dirname + "/dist",
-        publicPath: './public/'
+        publicPath:  __dirname + '/dist'
     },
 
     // Enable sourcemaps for debugging webpack's output.
@@ -32,7 +32,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loaders: ["style-loader", "css-loader", "sass-loader?sourceMap"]
+                loaders: ["style-loader", "css-loader", "sass-loader"]
             },
             {
                 test: /\.jpg$/,
@@ -41,6 +41,10 @@ module.exports = {
             {
                 test: /\.json$/,
                 loader: 'json-loader'
+            },
+            {
+                test: /\.css$/,
+                loader: 'style!css?sourceMap'
             },
             {
                 test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
@@ -61,7 +65,7 @@ module.exports = {
             {
                 test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
                 loader: "url?limit=10000&mimetype=image/svg+xml"
-            }
+             }
         ],
 
         preLoaders: [
