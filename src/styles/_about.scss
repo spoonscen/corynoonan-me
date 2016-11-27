@@ -10,28 +10,22 @@
     overflow: scroll;
     border-top: $border;
     border-bottom: $border;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
 
-
-    .about {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 3vw;
-
-      .about-header-container {
-        h1 {
-          font-size: 4vw;
-          margin: 0;
-        }
-      }
-
-      .about-info-container{
-        display: flex;
-        flex-direction: column;
-        width: 35vw;
-        margin-right: 4vw;
+    .about-header-container {
+      margin-left: 3vw;
+      h1 {
+        font-size: 4vw;
+        margin: 0;
       }
     }
-  }
 
+    .about-details-container {
+      width: 70vw;
+      margin-right: 4vw;
+    }
+  }
 }
 

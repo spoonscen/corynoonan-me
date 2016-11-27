@@ -43,7 +43,7 @@ router.get('/api/about', (req: Express.Request, res: Response) => {
         technicalRolls: ['Software Engineer', 'Scrum Master', 'Quality Assurance Engineer'],
         technicalSkills: {
           languages: {
-            strong: ['Javascript (ES5, ES6, ES7)', 'Typescript', 'Coffeescript', 'Sass'],
+            strong: ['Javascript (ES5, ES6, ES7)', 'Typescript', 'Sass'],
             medium: ['Coffeescript'],
             weak: ['Ruby', 'Bash'],
           },
