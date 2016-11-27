@@ -10,7 +10,7 @@ export function AboutPage(props: AboutPageProps): JSX.Element {
   }
 
   return (
-    <div className="resume-page-container">
+    <div className="about-page-container">
       <Navigation {...navigationProps} />
     </div>
   )

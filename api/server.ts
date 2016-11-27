@@ -11,6 +11,8 @@ app.use('/dist', express.static('dist'))
 app.use('/node_modules', express.static('node_modules'))
 app.use('/', router)
 app.use('/api/projects', router)
+app.use('/api/blog', router)
+app.use('/api/about', router)
 
 app.listen(7777, () => {
   console.log('corynoonan.me is listening on 7777')

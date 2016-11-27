@@ -1,0 +1,58 @@
+.projects-page-container {
+
+  .projects-content {
+    order: 2;
+    background-color: white;
+    width: 93vw;
+    height: 74vh;
+    overflow: scroll;
+    border-top: $border;
+    border-bottom: $border;
+  }
+
+}
+
+.project {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3vw;
+
+  .project-info-container{
+    color: $brown;
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    margin-right: 4vw;
+
+    h1 {
+      font-size: 4vw;
+      margin: 0;
+    }
+
+    .project-link-container {
+      display: inline-flex;
+      margin-top: 1vw;
+
+      .project-link {
+        color: $green;
+        margin-right: 1vw;
+        font-size: 1.5vw;
+      }
+      .project-link:hover {
+        color: $dark-green;
+      }
+    }
+  }
+
+  .project-image-container {
+    display: flex;
+    flex-direction: column;
+
+    .project-image {
+      width: 44vw;
+      margin: 1vw;
+      background-color: $brown;
+      padding: .16vw
+    }
+  }
+}
