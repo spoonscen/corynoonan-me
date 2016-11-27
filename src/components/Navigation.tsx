@@ -7,11 +7,12 @@ export interface NavigationProps {
   pathname: string
 }
 
+export const onHeaderClick = (window: Window, hash: string) => () => _.set(window.location, 'hash', hash)
+
 export const maybeHeaderLink = (pathname: string, hash: string, window: Window): JSX.Element => {
-  const onClick = (window: Window) => () => _.set(window.location, 'hash', hash)
   return  pathname === '/'
       ? <h1>cory noonan</h1>
-      : <h1 className="header-link" onClick={onClick(window)}>cory noonan</h1>
+      : <h1 className="header-link" onClick={onHeaderClick(window, hash)}>cory noonan</h1>
 }
 
 export function Navigation(props: NavigationProps): JSX.Element {
@@ -27,7 +28,7 @@ export function Navigation(props: NavigationProps): JSX.Element {
         <div className="bar" />
         <Link className={pathname === '/blog' ? 'active' : null} to="blog">blog</Link>
         <div className="bar" />
-        <Link className={pathname === '/resume' ? 'active' : null} to="about">about</Link>
+        <Link className={pathname === '/about' ? 'active' : null} to="about">about</Link>
         {props.children}
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React = require('react')
 import * as Promise from 'bluebird'
-import apiCalls = require('../../api-interactions')
+import apiInteractions from '../../apiInteractions'
 import * as _ from 'lodash'
 import { ProjectsPage } from './ProjectsPage'
 import { ProjectsPageProps, ProjectPageContainerState, ApiResponse } from './ProjectPageTypes'
@@ -19,7 +19,7 @@ export default class ProjectPageContainer extends React.Component<ProjectsPagePr
   componentDidMount(): Promise<void> {
     const location = _.get(window, 'location.origin') as string
 
-    return apiCalls.getProjects(location)
+    return apiInteractions.getProjects(location)
       .then((response: ApiResponse) => {
         this.setState({ projects: response.data.projects })
       })

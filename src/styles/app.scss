@@ -160,15 +160,12 @@ body {
           opacity: 0.8;
       }
 
-      a:active {
-          text-decoration: none;
-      }
-
       a.active {
+        text-decoration: none;
         background-color: white;
         color: $brown;
+        pointer-events: none;
       }
-
     }
   }
 }

@@ -1,12 +1,8 @@
 import * as React from 'react'
-import { Navigation } from '../components/Navigation'
+import { Navigation } from '../../components/Navigation'
+import { AboutPageProps } from './AboutPageTypes'
 
 
-export interface AboutPageProps {
-  location: {
-    pathname: string
-  }
-}
 
 export function AboutPage(props: AboutPageProps): JSX.Element {
   const navigationProps = {

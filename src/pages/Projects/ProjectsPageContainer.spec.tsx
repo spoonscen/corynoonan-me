@@ -4,7 +4,8 @@ import * as enzyme from 'enzyme'
 import { ProjectProps } from './ProjectPageTypes'
 import { expect } from 'chai'
 import { ProjectsPage } from './ProjectsPage'
-import apiCalls = require('../../api-interactions')
+import apiInteractions from '../../apiInteractions'
+
 import * as sinon from 'sinon'
 import * as Promise from 'bluebird'
 
@@ -38,7 +39,7 @@ describe('<ProjectsPageContainer />', () => {
   })
 
   it('gets projects from the API', () => {
-    const getProjectsStub: sinon.SinonStub = sandbox.stub(apiCalls, 'getProjects').returns(Promise.resolve({data: { projects: [] }}))
+    const getProjectsStub: sinon.SinonStub = sandbox.stub(apiInteractions, 'getProjects').returns(Promise.resolve({data: { projects: [] }}))
     wrapper = enzyme.mount(<ProjectsPageContainer {...projectsPageProps} />)
     expect(getProjectsStub.callCount).to.equal(1)
   })

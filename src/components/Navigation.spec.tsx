@@ -6,7 +6,7 @@ import { ProjectsPage } from '../pages/Projects/ProjectsPage'
 import { Link } from 'react-router'
 import * as _ from 'lodash'
 
-describe('Navigation.tsx', () => {
+describe('<Navigation />', () => {
 
   let wrapper: enzyme.ShallowWrapper<any, any>
   const props = {
@@ -49,6 +49,11 @@ describe('Navigation.tsx', () => {
       expect(links.find({to: 'blog'}).html()).to.equal('<a class="active">blog</a>')
       expect(links.find({to: 'projects'}).html()).to.equal('<a>projects</a>')
     })
+
+    it('disables the link for the active path', () => {
+      // expect(wrapper.)
+    })
+
   })
 
   describe('maybeHeaderLink', () => {
