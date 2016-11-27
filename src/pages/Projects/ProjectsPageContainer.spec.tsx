@@ -18,7 +18,7 @@ describe('<ProjectsPageContainer />', () => {
     location: {
       pathname: 'foobar'
     },
-    projects: [{}] as ProjectProps[],
+    projects: [{ title: 'foo' }] as ProjectProps[],
   }
 
   beforeEach(() => {

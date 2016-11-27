@@ -35,4 +35,26 @@ router.get('/api/projects', (req: Express.Request, res: Response) => {
   })
 })
 
+router.get('/api/about', (req: Express.Request, res: Response) => {
+  res.send({
+    data: {
+      about: 'Coming Soon'
+    }
+  })
+})
+
+router.get('/api/blog', (req: Express.Request, res: Response) => {
+  res.send({
+    data: {
+      posts: [
+        {
+          title: 'Test',
+          datePosted: '11/27/2016',
+          content: 'blog post content',
+        }
+      ]
+    }
+  })
+})
+
 export default router

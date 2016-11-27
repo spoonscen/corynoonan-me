@@ -1,6 +1,6 @@
-import * as React from "react";
-import { render } from "react-dom";
-import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router'
+import * as React from 'react'
+import { render } from 'react-dom'
+import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 import { BlogPage } from './pages/BlogPage'
 import { MainPage } from './pages/MainPage'
 import { App } from './components/App'

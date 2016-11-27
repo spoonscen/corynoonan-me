@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import * as enzyme from 'enzyme'
 import { IndexPage } from './index'
-import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router'
+import { Router, Route } from 'react-router'
 
 
 describe('index.tsx', () => {

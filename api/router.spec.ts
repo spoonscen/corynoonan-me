@@ -35,4 +35,22 @@ describe('router', () => {
         .that.is.an('array')
     }))
 
+  it('responds to a GET at /api/about', () =>
+    agent.get('/api/about').then((response: Response) => {
+      expect(response).to.have.status(200)
+      expect(response.body)
+        .to.have.property('data')
+        .that.has.property('about')
+        .that.is.a('string')
+    }))
+
+  it('responds to a GET at /api/blog', () =>
+    agent.get('/api/blog').then((response: Response) => {
+      expect(response).to.have.status(200)
+      expect(response.body)
+        .to.have.property('data')
+        .that.has.property('posts')
+        .that.is.an('array')
+    }))
+
 })
