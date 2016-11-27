@@ -4,7 +4,7 @@ import * as enzyme from 'enzyme'
 import { ProjectProps } from './ProjectPageTypes'
 import { expect } from 'chai'
 import { ProjectsPage } from './ProjectsPage'
-import apiInteractions from '../../apiInteractions'
+import apiInteractions from '../../apiInteractions/apiInteractions'
 
 import * as sinon from 'sinon'
 import * as Promise from 'bluebird'

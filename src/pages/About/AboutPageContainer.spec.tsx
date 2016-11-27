@@ -3,7 +3,7 @@ import AboutPageContainer from './AboutPageContainer'
 import * as enzyme from 'enzyme'
 import { expect } from 'chai'
 import { AboutPage } from './AboutPage'
-import apiInteractions from '../../apiInteractions'
+import apiInteractions from '../../apiInteractions/apiInteractions'
 
 import * as sinon from 'sinon'
 import * as Promise from 'bluebird'
