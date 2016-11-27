@@ -41,7 +41,7 @@ describe('router', () => {
       expect(response.body)
         .to.have.property('data')
         .that.has.property('about')
-        .that.is.a('string')
+        .that.is.an('object')
     }))
 
   it('responds to a GET at /api/blog', () =>

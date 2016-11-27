@@ -1,4 +1,5 @@
 .about-page-container {
+  color: $brown;
 
   .about-content {
     order: 2;
@@ -9,6 +10,7 @@
     overflow: scroll;
     border-top: $border;
     border-bottom: $border;
+
 
     .about {
       display: flex;
@@ -23,7 +25,6 @@
       }
 
       .about-info-container{
-        color: $brown;
         display: flex;
         flex-direction: column;
         width: 35vw;
