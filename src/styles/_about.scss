@@ -1,0 +1,36 @@
+.about-page-container {
+
+  .about-content {
+    order: 2;
+    background-color: white;
+    width: 93vw;
+    height: 33vh;
+    margin-top: 41vh;
+    overflow: scroll;
+    border-top: $border;
+    border-bottom: $border;
+
+    .about {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 3vw;
+
+      .about-header-container {
+        h1 {
+          font-size: 4vw;
+          margin: 0;
+        }
+      }
+
+      .about-info-container{
+        color: $brown;
+        display: flex;
+        flex-direction: column;
+        width: 35vw;
+        margin-right: 4vw;
+      }
+    }
+  }
+
+}
+

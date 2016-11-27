@@ -12,6 +12,8 @@ export function AboutPage(props: AboutPageProps): JSX.Element {
   return (
     <div className="about-page-container">
       <Navigation {...navigationProps} />
+       <div className="about-content">
+      </div>
     </div>
   )
 }
