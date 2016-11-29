@@ -1,0 +1,1 @@
+![Travis Status](https://travis-ci.org/spoonscen/corynoonan-me.svg?branch=master)  [![Coverage Status](https://coveralls.io/repos/github/spoonscen/corynoonan-me/badge.svg?branch=master)](https://coveralls.io/github/spoonscen/corynoonan-me?branch=master)
