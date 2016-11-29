@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "concurrently": "concurrently -p command",
+    "coverage-report": "open coverage/lcov-report/index.html",
+    "coveralls": "npm run test -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "dev": "npm run concurrently --kill-others 'npm run frontend' 'npm run server'",
     "frontend": "webpack --watch",
     "server": "nodemon --watch 'api/**/*.ts' --ignore 'src/**/*' --exec 'ts-node' api/server.ts",
-    "coverage-report": "open coverage/lcov-report/index.html",
     "test": "ts-node node_modules/istanbul/lib/cli.js cover --include-all-sources true -e .ts -e .tsx -x '*.spec.*' -x webpack.config.ts _mocha -- '{api,src}/**/*.spec.{ts,tsx}' --require ignore-styles --require test/setup-env.js"
   },
   "author": "Cory E Noonan",
@@ -44,6 +45,7 @@
     "chai": "3.5.0",
     "chai-http": "3.0.0",
     "concurrently": "3.1.0",
+    "coveralls": "^2.11.15",
     "css-loader": "0.26.0",
     "enzyme": "2.6.0",
     "extract-text-webpack-plugin": "1.0.1",
@@ -54,6 +56,7 @@
     "json-loader": "0.5.4",
     "less": "2.7.1",
     "mocha": "^3.2.0",
+    "mocha-lcov-reporter": "^1.2.0",
     "nock": "9.0.2",
     "node-sass": "3.13.0",
     "react-addons-test-utils": "15.3.2",
