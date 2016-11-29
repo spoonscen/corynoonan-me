@@ -1,6 +1,5 @@
 import chai = require('chai')
-import express = require('express')
-import router from './router'
+import app from './server'
 const expect = chai.expect
 chai.use(require('chai-http'))
 
@@ -11,14 +10,13 @@ interface Response extends ChaiHttp.Response {
 
 describe('router', () => {
 
-  let app: express.Application
   let agent: ChaiHttp.Agent
 
   beforeEach(() => {
-    app = express()
-    app.use(router)
     agent = chai.request.agent(app)
   })
+
+  after(() => app.close() )
 
   it('responds to a GET at /', () =>
     agent.get('/').then((response: Response) => {
