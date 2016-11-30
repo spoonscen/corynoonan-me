@@ -23,6 +23,25 @@ describe('<Project />', () => {
     wrapper = enzyme.shallow(<Project {...MockProjectsProps} />)
   })
 
+  it('handles the case with no data', () => {
+    const emptyMockProjectsProps = {
+      title: null,
+      details: null,
+      link: null,
+      github: null,
+      description: null,
+      imageLinks: [ null ]
+    } as ProjectProps
+
+    wrapper = enzyme.shallow(<Project {...emptyMockProjectsProps} />)
+    expect(wrapper.find('.project-image').first().html()).to.equal(`<img class="project-image" src=""/>`)
+    expect(wrapper.find('.project-title').text()).to.equal('')
+    expect(wrapper.find('.project-details').text()).to.equal('')
+    expect(wrapper.find('.project-description').text()).to.equal('')
+    expect(wrapper.find('.project-link.githib').html()).to.equal(`<a target="_blank" class="project-link githib" href=""><i class="fa fa-github" aria-hidden="true"></i></a>`)
+    expect(wrapper.find('.project-link.website')).to.have.length(0)
+  })
+
   it('has the project info', () => {
     expect(wrapper.find('.project')).to.have.length(1)
     expect(wrapper.find('.project-image-container')).to.have.length(1)
