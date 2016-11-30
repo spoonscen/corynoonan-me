@@ -4,7 +4,7 @@ export interface ApiResponse {
   }
 }
 
-export interface ProjectPageContainerState {
+export interface AboutPageContainerState {
   about?: string
   err?: Error
 }

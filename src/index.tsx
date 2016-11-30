@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, IndexRoute, hashHistory, Link } from 'react-router'
-import { BlogPage } from './pages/BlogPage'
+import BlogPageContainer from './pages/Blog/BlogPageContainer'
 import { MainPage } from './pages/MainPage'
 import ProjectsPageContainer from './pages/Projects/ProjectsPageContainer'
 import AboutPageContainer from './pages/About/AboutPageContainer'
@@ -31,7 +31,7 @@ export const IndexPage = (
     <Router history={hashHistory}>
       <Route path="/" component={RootApp}>
         <IndexRoute component={MainPage} />
-        <Route path="blog" component={BlogPage} />
+        <Route path="blog" component={BlogPageContainer} />
         <Route path="projects" component={ProjectsPageContainer} />
         <Route path="about" component={AboutPageContainer} />
       </Route>

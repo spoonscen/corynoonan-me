@@ -25,7 +25,5 @@ export module expressApp {
   }
 }
 
-
-
-const app = expressApp.setupExpress(defaultExpressApp, router)
-export default app
+const server = expressApp.setupExpress(defaultExpressApp, router)
+export default server
