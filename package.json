@@ -4,12 +4,14 @@
   "description": "Personal website of Cory Noonan @spoonscen",
   "main": "index.js",
   "scripts": {
+    "production": "webpack && npm start",
     "concurrently": "concurrently -p command",
     "coverage-report": "open coverage/lcov-report/index.html",
     "coveralls": "npm run test -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "dev": "npm run concurrently --kill-others 'npm run frontend' 'npm run server'",
     "frontend": "webpack --watch",
     "server": "nodemon --watch 'api/**/*.ts' --ignore 'src/**/*' --exec 'ts-node' api/server.ts",
+    "start": "'ts-node' api/server.ts",
     "test": "ts-node node_modules/istanbul/lib/cli.js cover --include-all-sources true -e .ts -e .tsx -x '*.spec.*' -x webpack.config.ts _mocha -- '{api,src}/**/*.spec.{ts,tsx}' --require ignore-styles --require test/setup-env.js"
   },
   "author": "Cory E Noonan",
@@ -25,8 +27,8 @@
     "react-router": "3.0.0",
     "request": "2.79.0",
     "request-promise": "4.1.1"
-  },
-  "devDependencies": {
+    },
+    "devDependencies": {
     "@types/chai": "3.4.34",
     "@types/chai-http": "0.0.29",
     "@types/enzyme": "2.5.38",
