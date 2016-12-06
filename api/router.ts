@@ -40,10 +40,10 @@ router.get('/api/about', (req: Express.Request, res: Response) => {
     data: {
       about: {
         email: 'cory.noonan@gmail.com',
-        technicalRolls: ['Software Engineer', 'Scrum Master', 'Quality Assurance Engineer'],
+        technicalRolls: ['Full Stack Software Engineer', 'Scrum Master', 'Quality Assurance Engineer'],
         technicalSkills: {
           languages: {
-            strong: ['Javascript (ES5, ES6, ES7)', 'Typescript', 'Sass'],
+            strong: ['Javascript', 'Typescript', 'Sass', 'CSS', 'HTML5'],
             medium: ['Coffeescript'],
             weak: ['Ruby', 'Bash'],
           },

@@ -1,7 +1,7 @@
 [
   {
     "title": "corynoonan.me",
-    "details": "Personal Site (Typescript, React, Nodejs, Webpack, Sass)",
+    "details": "Personal Site (Typescript, React, Nodejs, Webpack, Sass, Docker)",
     "description": "I wanted to build this site to flex and showcase my skillset. I chose Typescript because I have found huge advantages using a typed language. The number of bugs is dramatically reduced and the accuracy and readability of the code increases. The frontend is written in React. I followed a “stateful and pure” pattern where the only components that have state are the ones that have to make  requests to the API. The advantage of this pattern is a better separation of concerns. All page routing is handled using react-router. The front end code is tested using mocha, chai, sinon, and enzyme. The API is Typescript/Nodejs leveraging the Expressjs framework and is tested with mocha and chai. All of the styles are written is Sass and there are no skeleton frameworks used for element positioning.",
     "link": "",
     "github": "https://github.com/spoonscen/corynoonan-me",
