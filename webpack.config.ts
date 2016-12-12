@@ -14,7 +14,12 @@ module.exports = {
         path: __dirname + '/dist',
         publicPath:  __dirname + '/dist'
     },
-
+    include: [
+        __dirname + 'src'
+    ],
+    exclude: [
+        /\.spec.tsx/
+    ],
     // Enable sourcemaps for debugging webpack's output.
     devtool: 'source-map',
 
@@ -28,7 +33,8 @@ module.exports = {
             // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
             {
                 test: /\.tsx?$/,
-                loader: 'ts-loader'
+                loader: 'ts-loader',
+                exclude: /\.spec/
             },
             {
                 test: /\.scss$/,

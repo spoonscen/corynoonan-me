@@ -21,13 +21,9 @@ describe('<AboutPageContainer />', () => {
     },
     about: {
       email: 'someemail@email.com',
-      technicalRolls: ['foo'],
+      technicalRoles: ['foo'],
       technicalSkills: {
-        languages: {
-          strong: ['some language'],
-          medium: ['some other language'],
-          weak: ['some less used language'],
-        },
+        languages: ['some other language'],
         frameWorks: ['javascript stuff'],
         otherTechnologies: ['some software']
       },

@@ -40,13 +40,9 @@ router.get('/api/about', (req: Express.Request, res: Response) => {
     data: {
       about: {
         email: 'cory.noonan@gmail.com',
-        technicalRolls: ['Full Stack Software Engineer', 'Scrum Master', 'Quality Assurance Engineer'],
+        technicalRoles: ['Full Stack Software Engineer', 'Scrum Master', 'Quality Assurance Engineer'],
         technicalSkills: {
-          languages: {
-            strong: ['Javascript', 'Typescript', 'Sass', 'CSS', 'HTML5'],
-            medium: ['Coffeescript'],
-            weak: ['Ruby', 'Bash'],
-          },
+          languages: ['Javascript', 'Typescript', 'Sass', 'CSS', 'HTML5', 'Coffeescript', 'Ruby', 'Bash'],
           frameWorks: ['React', 'React-Native', 'Angular', 'Express', 'Cucumber', 'Capybara', 'Mocha', 'Ava'],
           otherTechnologies: ['Mongodb', 'Docker', 'webpack', 'gulp', 'chai', 'sinon', 'nock', 'other various JS testing libraries', 'Jira', 'Travis CI', 'Jenkins', 'Team City', 'Confluence', 'git', 'Google Analytics' ]
         },

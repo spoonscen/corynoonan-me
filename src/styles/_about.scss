@@ -5,7 +5,7 @@
     order: 2;
     background-color: white;
     width: 93vw;
-    height: 33vh;
+    height: 55vh;
     margin-top: 41vh;
     overflow: scroll;
     border-top: $border;
@@ -16,6 +16,7 @@
 
     .about-header-container {
       margin-left: 3vw;
+      padding-top: 1.5vh;
       h1 {
         font-size: 4vw;
         margin: 0;
@@ -25,6 +26,11 @@
     .about-details-container {
       width: 70vw;
       margin-right: 4vw;
+      padding-top: 1.5vh;
+
+      .details-title {
+        margin-bottom: 5px;
+      }
     }
   }
 }

@@ -10,21 +10,19 @@ export interface AboutPageContainerState {
 }
 
 export interface AboutPageProps {
+  children: JSX.Element[]
   location: {
     pathname: string
   }
   about: {
     email: string
-    technicalRolls: string[]
+    technicalRoles: string[]
     technicalSkills: {
-      languages: {
-        strong: string[],
-        medium: string[],
-        weak: string[],
-      },
+      languages: string[]
       frameWorks: string[]
       otherTechnologies: string[]
     },
     interests: string[]
   }
 }
+
