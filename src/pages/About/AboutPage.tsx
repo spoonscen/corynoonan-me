@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Navigation } from '../../components/Navigation'
 import { AboutPageProps } from './AboutPageTypes'
 import * as _ from 'lodash'
-
+const CopyToClipboard: any = require('react-copy-to-clipboard')
 
 export function AboutPage(props: AboutPageProps): JSX.Element {
   const navigationProps = {
@@ -24,7 +24,9 @@ export function AboutPage(props: AboutPageProps): JSX.Element {
       <div className="about-content">
         <div className="about-header-container">
           <h1 className="about-header">Full Stack Ninja</h1>
+          <CopyToClipboard text={email}>
           <h4 className="about-details-email">{email}</h4>
+          </CopyToClipboard>
         </div>
 
         <div className="about-details-container">

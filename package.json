@@ -23,12 +23,13 @@
     "lodash": "4.17.2",
     "path": "0.12.7",
     "react": "15.3.2",
+    "react-copy-to-clipboard": "4.2.3",
     "react-dom": "15.3.2",
     "react-router": "3.0.0",
     "request": "2.79.0",
     "request-promise": "4.1.1"
-    },
-    "devDependencies": {
+  },
+  "devDependencies": {
     "@types/chai": "3.4.34",
     "@types/chai-http": "0.0.29",
     "@types/enzyme": "2.5.38",
