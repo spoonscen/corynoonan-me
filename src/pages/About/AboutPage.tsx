@@ -16,8 +16,6 @@ export function AboutPage(props: AboutPageProps): JSX.Element {
   const frameWorks: string[] = _.get(props, 'about.technicalSkills.frameWorks', [])
   const otherTechnologies: string[] = _.get(props, 'about.technicalSkills.otherTechnologies', [])
 
-  // console.log(props)
-
   return (
     <div className="about-page-container">
       <Navigation {...navigationProps} />
