@@ -15,4 +15,4 @@ echo 'replace .gitignore'
 rm -f .gitignore.master
 echo 'delete .gitignore backup'
 echo 'Released!'
-git checkout master
+git checkout master -f
