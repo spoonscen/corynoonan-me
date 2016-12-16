@@ -22,13 +22,13 @@ export function AboutPage(props: AboutPageProps): JSX.Element {
       <Navigation {...navigationProps} />
       <div className="about-content">
         <div className="about-header-container">
-          <h1 className="about-header">Full Stack Ninja</h1>
+          <h1 className="about-header">Full Stack Engineer/Ninja</h1>
           <CopyToClipboard text={email}>
-            <h4 className="about-details-email">
+            <h3 className="about-details-email">
               <span data-tip="Click to copy to the clipboard!">{email}</span>
-            </h4>
+            </h3>
           </CopyToClipboard>
-          <ReactTooltip effect="solid" place="right" offset={{top: -10, right: 175}} />
+          <ReactTooltip effect="solid" place="right" offset={{top: -10, right: 260}} />
         </div>
 
         <div className="about-details-container">

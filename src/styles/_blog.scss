@@ -1,0 +1,18 @@
+.blog-page-container {
+
+  .blog-page-content {
+    order: 2;
+    background-color: white;
+    width: 93vw;
+    height: 74vh;
+    overflow: scroll;
+    border-top: $border;
+    border-bottom: $border;
+
+    h1 {
+      text-align: center;
+      color: $brown;
+    }
+  }
+
+}

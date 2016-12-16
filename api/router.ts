@@ -42,8 +42,8 @@ router.get('/api/about', (req: Express.Request, res: Response) => {
         email: 'cory.noonan@gmail.com',
         technicalRoles: ['Full Stack Software Engineer', 'Scrum Master', 'Quality Assurance Engineer'],
         technicalSkills: {
-          languages: ['Javascript', 'Typescript', 'Sass', 'CSS', 'HTML5', 'Coffeescript', 'Ruby', 'Bash'],
-          frameWorks: ['React', 'React-Native', 'Angular', 'Express', 'Cucumber', 'Capybara', 'Mocha', 'Ava'],
+          languages: ['Typescript', 'Javascript', 'Sass', 'CSS', 'HTML5', 'Jade', 'Less', 'Gherkin', 'Coffeescript', 'Ruby', 'Bash'],
+          frameWorks: ['React', 'React-Native', 'Angular', 'Express', 'Cucumber', 'Capybara', 'Mocha', 'Ava', 'Jest'],
           otherTechnologies: ['Mongodb', 'Docker', 'webpack', 'gulp', 'chai', 'sinon', 'nock', 'other various JS testing libraries', 'Jira', 'Travis CI', 'Jenkins', 'Team City', 'Confluence', 'git', 'Google Analytics' ]
         },
         interests: ['Track cycling/fixies', 'building bikes', 'photography', 'making hot sauce', 'fermentation', 'spinning/collecting vinyl records', 'juggling', 'fire breathing', 'fancy coffee', 'dancing', 'blacksmith puzzles', 'sewing', 'vegetables', 'vegetarian cooking']
