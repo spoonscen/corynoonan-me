@@ -10,6 +10,7 @@
     "coveralls": "npm run test -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "dev": "npm run concurrently --kill-others 'npm run frontend' 'npm run server'",
     "frontend": "webpack --watch",
+    "release": "./release.sh",
     "server": "nodemon --watch 'api/**/*.ts' --ignore 'src/**/*' --exec 'ts-node' api/server.ts",
     "start": "'ts-node' api/server.ts",
     "test": "ts-node node_modules/istanbul/lib/cli.js cover --include-all-sources true -e .ts -e .tsx -x '*.spec.*' -x webpack.config.ts _mocha -- '{api,src}/**/*.spec.{ts,tsx}' --require ignore-styles --require test/setup-env.js"

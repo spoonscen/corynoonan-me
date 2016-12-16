@@ -4,7 +4,7 @@ import router from './router'
 import * as http from 'http'
 
 
-
+const PORT = process.env.PORT
 
 interface Response extends Express.Response {
   send: (item: string) => void
@@ -19,7 +19,7 @@ export module expressApp {
     app.use('/api/projects', router)
     app.use('/api/blog', router)
     app.use('/api/about', router)
-    const server = app.listen(7777, () => { console.log('corynoonan.me is listening on 7777') })
+    const server = app.listen(PORT || 7777, () => { console.log('corynoonan.me is listening on 7777') })
 
     return server
   }
