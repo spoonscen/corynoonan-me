@@ -3,6 +3,7 @@ import { Navigation } from '../../components/Navigation'
 import { AboutPageProps } from './AboutPageTypes'
 import * as _ from 'lodash'
 const CopyToClipboard: any = require('react-copy-to-clipboard')
+const ReactTooltip: any = require('react-tooltip')
 
 export function AboutPage(props: AboutPageProps): JSX.Element {
   const navigationProps = {
@@ -23,8 +24,11 @@ export function AboutPage(props: AboutPageProps): JSX.Element {
         <div className="about-header-container">
           <h1 className="about-header">Full Stack Ninja</h1>
           <CopyToClipboard text={email}>
-          <h4 className="about-details-email">{email}</h4>
+            <h4 className="about-details-email">
+              <span data-tip="Click to copy to the clipboard!">{email}</span>
+            </h4>
           </CopyToClipboard>
+          <ReactTooltip effect="solid" place="right" offset={{top: -10, right: 175}} />
         </div>
 
         <div className="about-details-container">

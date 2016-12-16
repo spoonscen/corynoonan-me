@@ -21,12 +21,17 @@
         font-size: 4vw;
         margin: 0;
       }
+      h4 {
+        cursor: pointer;
+      }
     }
 
     .about-details-container {
       width: 70vw;
       margin-right: 4vw;
       padding-top: 1.5vh;
+      padding-bottom: 1.5vw;
+
 
       .details-title {
         margin-bottom: 5px;
