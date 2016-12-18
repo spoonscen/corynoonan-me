@@ -10,7 +10,7 @@ describe('<AboutPage />', () => {
   let wrapper: enzyme.CommonWrapper<any, any>
   let sandbox: sinon.SinonSandbox
 
-  const mockAboutPageProps = {
+  const mockAboutPageProps: AboutPageProps = {
     children: [{} as JSX.Element],
     location: {
       pathname: 'foobar'

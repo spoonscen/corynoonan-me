@@ -9,6 +9,7 @@
     },
     "include": [
         "src/**/*",
+        "src/pages/**/*",
         "api/**/*"
     ],
     "exclude": [
