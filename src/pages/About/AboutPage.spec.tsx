@@ -4,7 +4,8 @@ import { expect } from 'chai'
 import { AboutPage } from './AboutPage'
 import { AboutPageProps } from './AboutPageTypes'
 import * as sinon from 'sinon'
-
+const CopyToClipboard: any = require('react-copy-to-clipboard')
+const ReactTooltip: any = require('react-tooltip')
 
 describe('<AboutPage />', () => {
   let wrapper: enzyme.CommonWrapper<any, any>
@@ -19,7 +20,7 @@ describe('<AboutPage />', () => {
       email: 'someemail@email.com',
       technicalRoles: ['foo'],
       technicalSkills: {
-        languages: ['some less used language'],
+        languages: ['some language'],
         frameWorks: ['javascript stuff'],
         otherTechnologies: ['some software']
       },
@@ -39,7 +40,6 @@ describe('<AboutPage />', () => {
     expect(wrapper.find('.about-header-container')).to.have.length(1)
     expect(wrapper.find('.about-header')).to.have.length(1)
     expect(wrapper.find('.about-details-container')).to.have.length(1)
-    expect(wrapper.find('.about-details-email')).to.have.length(1)
     expect(wrapper.find('.about-details-technical-rolls')).to.have.length(1)
     expect(wrapper.find('.about-details-technical-skills-languages')).to.have.length(1)
     expect(wrapper.find('.about-details-technical-skills-frameworks')).to.have.length(1)
@@ -47,8 +47,12 @@ describe('<AboutPage />', () => {
     expect(wrapper.find('.about-details-interests')).to.have.length(1)
   })
 
-  const { email } = mockAboutPageProps.about
-  it('renders the email', () =>
-    expect(wrapper.find('.about-details-email').text()).to.equal(email))
-
+  it('renders the contact info', () => {
+    expect(wrapper.find(CopyToClipboard)).to.have.length(1)
+    expect(wrapper.find(CopyToClipboard).prop('text')).to.equal(mockAboutPageProps.about.email)
+    expect(wrapper.find(ReactTooltip)).to.have.length(1)
+    expect(wrapper.find('.about-link')).to.have.length(3)
+    expect(wrapper.find('.github')).to.have.length(1)
+    expect(wrapper.find('.linkedin')).to.have.length(1)
+  })
 })

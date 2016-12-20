@@ -12,7 +12,7 @@ export function MainPage(props: MainPageProps): JSX.Element {
   const { children, location } = props
   const { pathname } = location
   const navigationProps = { children, pathname }
-  
+
   return (
     <div className="main-page-container">
       <Navigation {...navigationProps} />
