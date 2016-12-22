@@ -22,7 +22,7 @@ export function AboutPage(props: AboutPageProps): JSX.Element {
       <Navigation {...navigationProps} />
       <div className="about-content">
         <div className="about-header-container">
-          <h1 className="about-header">Full Stack Engineer/Ninja</h1>
+          <h1 className="about-header">Full Stack Engineer</h1>
           <h3>
             <CopyToClipboard text={email}>
               <span className="about-link" data-tip="Click to copy to the clipboard!"><i className="fa fa-at" aria-hidden="true" /></span>
