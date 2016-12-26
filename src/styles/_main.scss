@@ -6,14 +6,14 @@
   height: 92vh;
 
   .navigation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .navigation {
       display: inline-flex;
       justify-content: space-between;
       width: 31vw;
-
-      font-size: 2vw;
-
       .bar {
         border-left: 2px solid white;
       }
@@ -21,13 +21,13 @@
 
 
     .full-name-header-container {
-      font-size: 2.25vw;
       text-transform: uppercase;
       color: white;
       display: flex;
       justify-content: space-around;
 
       h1 {
+        font-size: 4.1vw;
         margin-top: 0vw;
         margin-bottom: 20px;
       }
