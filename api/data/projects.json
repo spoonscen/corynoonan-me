@@ -6,7 +6,7 @@
     "link": "",
     "github": "https://github.com/spoonscen/corynoonan-me",
     "imageLinks": [
-      "https://s3.amazonaws.com/corynoonan.me/corynoonanme.png"
+      "/images/projects/corynoonan-me.png"
     ]
   },
   {
@@ -16,7 +16,7 @@
     "link": "https://marketplace.visualstudio.com/items?itemName=spoonscen.es6-mocha-snippets",
     "github": "https://github.com/spoonscen/es6-mocha-snippets-vs-code",
     "imageLinks": [
-      "https://s3.amazonaws.com/corynoonan.me/Screen+Shot+2016-11-26+at+15.51.47.png"
+      "/images/projects/mocha-snippets.png"
     ]
   },
   {
@@ -26,7 +26,7 @@
     "link": "http://spoonsauce.com",
     "github": "https://github.com/spoonscen/Spoonsauce",
     "imageLinks": [
-      "https://s3.amazonaws.com/corynoonan.me/Screen+Shot+2016-11-25+at+19.32.22.png"
+      "/images/projects/spoonsauce.png"
     ]
   },
   {
@@ -36,7 +36,7 @@
     "link": "https://chrome.google.com/webstore/detail/unix-timestamp-converter/clkkocmhcpfginlphpgjmgpdffihcbmm",
     "github": "https://github.com/spoonscen/unix-timestamp-chrome",
     "imageLinks": [
-      "https://s3.amazonaws.com/corynoonan.me/Screen+Shot+2016-11-26+at+14.57.20.png"
+      "/images/projects/unix-timestamp.png"
     ]
   }
 ]

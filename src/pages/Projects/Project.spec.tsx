@@ -3,9 +3,12 @@ import Project from './Project'
 import * as enzyme from 'enzyme'
 import { ProjectProps } from './ProjectPageTypes'
 import { expect } from 'chai'
+import * as sinon from 'sinon'
+import utils from '../../utils'
 
 describe('<Project />', () => {
   let wrapper: enzyme.ShallowWrapper<any, any>
+  let sandbox: sinon.SinonSandbox
 
   const MockProjectsProps = {
     title: 'mock title',
@@ -20,8 +23,10 @@ describe('<Project />', () => {
   } as ProjectProps
 
   beforeEach(() => {
+    sandbox = sinon.sandbox.create()
     wrapper = enzyme.shallow(<Project {...MockProjectsProps} />)
   })
+  afterEach(() => sandbox.restore())
 
   it('handles the case with no data', () => {
     const emptyMockProjectsProps = {
@@ -33,6 +38,7 @@ describe('<Project />', () => {
       imageLinks: [ null ]
     } as ProjectProps
 
+    sandbox.stub(utils, 'getLink').returns('')
     wrapper = enzyme.shallow(<Project {...emptyMockProjectsProps} />)
     expect(wrapper.find('.project-image').first().html()).to.equal(`<img class="project-image" src=""/>`)
     expect(wrapper.find('.project-title').text()).to.equal('')
@@ -43,6 +49,8 @@ describe('<Project />', () => {
   })
 
   it('has the project info', () => {
+    sandbox.stub(utils, 'getLink').returns('mockFirstImage.com')
+    wrapper = enzyme.shallow(<Project {...MockProjectsProps} />)
     expect(wrapper.find('.project')).to.have.length(1)
     expect(wrapper.find('.project-image-container')).to.have.length(1)
     expect(wrapper.find('.project-image')).to.have.length(2)

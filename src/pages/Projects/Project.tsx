@@ -1,14 +1,18 @@
 import * as React from 'react'
 import { ProjectProps } from './ProjectPageTypes'
 import * as _ from 'lodash'
+import utils from '../../utils'
 
 export default function Project(props: ProjectProps): JSX.Element {
   const { title, link, github, details, description, imageLinks } = props
-
+  const images = _.map(imageLinks, (imageLink: string) => (
+    <a key={utils.getLink(imageLink, window.location.host)} target="_blank" href={link}>
+      <img  className="project-image" src={utils.getLink(imageLink, window.location.host) || ''} />
+    </a> ))
   return (
     <div className="project" key={title}>
       <div className="project-image-container">
-        {_.map(imageLinks, (imageLink: string) => <a key={imageLink} target="_blank" href={link}><img  className="project-image" src={imageLink || ''} /></a> )}
+        {images}
       </div>
       <div className="project-info-container">
         <h1 className="project-title">{title || ''}</h1>

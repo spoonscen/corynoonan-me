@@ -1,6 +1,6 @@
 module utils {
-  export function getStaticContentUrl(partialUrl: string, origin: string): string {
-    return `${origin}/public${partialUrl}`
+  export function getLink(partialUrl: string, origin: string): string {
+    return partialUrl ? `http://${origin}/public${partialUrl}` : ''
   }
 }
 
