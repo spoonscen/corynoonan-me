@@ -13,7 +13,6 @@ router.get('/', (req: Express.Request, res: Response) => {
         <head>
             <meta charset="UTF-8" />
             <title>Cory Noonan</title>
-            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
             <link rel="shortcut icon" href="../public/assets/bikeicon.png" type="image/x-icon">
             <link rel="stylesheet" type="text/css" href="../public/assets/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
         </head>
