@@ -24,11 +24,13 @@ export function Navigation(props: NavigationProps): JSX.Element {
       {maybeHeaderLink(pathname, '#/', window)}
       </div>
       <div className="navigation">
-        <Link className={pathname === '/projects' ? 'active' : null} to="projects">projects</Link>
-        <div className="bar" />
-        <Link className={pathname === '/blog' ? 'active' : null} to="blog">blog</Link>
-        <div className="bar" />
-        <Link className={pathname === '/about' ? 'active' : null} to="about">about</Link>
+        <ul>
+          <li><Link className={pathname === '/projects' ? 'active' : null} to="projects">projects</Link></li>
+          <li><div className="bar" /></li>
+          <li><Link className={pathname === '/blog' ? 'active' : null} to="blog">blog</Link></li>
+          <li><div className="bar" /></li>
+          <li><Link className={pathname === '/about' ? 'active' : null} to="about">about</Link></li>
+        </ul>
         {props.children}
       </div>
     </div>

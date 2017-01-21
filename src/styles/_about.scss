@@ -5,8 +5,7 @@
     order: 2;
     background-color: white;
     width: 93vw;
-    height: 55vh;
-    margin-top: 41vh;
+    height: 100%;
     overflow: scroll;
     border-top: $border;
     border-bottom: $border;
@@ -47,11 +46,21 @@
         margin-top: .8vw;
         font-size: 1.5vw;
       }
-      
+
       .details {
         font-size: 1.2vw;
       }
     }
   }
 }
+@media (max-width: 950px) {
+  .about-page-container {
+    .details-title {
+      font-size: 3vw !important;
+    }
 
+    .details {
+      font-size: 2vw !important;
+    }
+  }
+}
