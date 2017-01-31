@@ -1,11 +1,8 @@
-git checkout -B release
+git checkout release
 echo 'On Release Branch!'
 cp .gitignore .gitignore.master
 echo 'Backed up .gitignore'
 cp .gitignore.release .gitignore
-echo 'Implemented release .gitignore'
-webpack
-echo 'Bundled to dist!'
 git add .
 git commit -m 'release build'
 git push origin release -f
