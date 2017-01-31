@@ -1,4 +1,4 @@
-git checkout release
+git checkout -B release
 echo 'On Release Branch!'
 cp .gitignore .gitignore.master
 echo 'Backed up .gitignore'
